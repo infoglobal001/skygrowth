@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | SkyGrowth</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f9f4;
+      color: #183321;
+    }
+
+    .login-header {
+      background: #ffffff;
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e5eee4;
+    }
+
+    .brand {
+      color: #21843c;
+      font-size: 23px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .login-header a:last-child {
+      color: #21843c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .login-container {
+      width: 90%;
+      max-width: 440px;
+      margin: 65px auto;
+      background: white;
+      padding: 35px 28px;
+      border-radius: 14px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+    }
+
+    .login-container h1 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 27px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #718075;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #d9e4d9;
+      border-radius: 7px;
+      font-size: 15px;
+    }
+
+    input:focus {
+      outline: 2px solid #b5e1bd;
+      border-color: #21843c;
+    }
+
+    .login-button {
+      width: 100%;
+      padding: 15px;
+      background: #21843c;
+      color: white;
+      border: none;
+      border-radius: 7px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .login-button:hover {
+      background: #176c30;
+    }
+
+    .register-link {
+      text-align: center;
+      margin-top: 24px;
+      color: #718075;
+      font-size: 14px;
+    }
+
+    .register-link a {
+      color: #21843c;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .home-link {
+      display: block;
+      text-align: center;
+      margin-top: 22px;
+      color: #21843c;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .notice {
+      display: none;
+      margin-top: 16px;
+      padding: 12px;
+      background: #fff7df;
+      color: #765b13;
+      border-radius: 6px;
+      font-size: 13px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #718075;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="login-header">
+    <a href="index.html" class="brand">SKYGROWTH</a>
+    <a href="register.html">Create Account</a>
+  </header>
+
+  <main class="login-container">
+    <h1>Welcome Back</h1>
+    <p class="subtitle">Sign in to access your account.</p>
+
+    <form id="loginForm">
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          autocomplete="username"
+          required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter your password"
+          autocomplete="current-password"
+          required>
+      </div>
+
+      <button type="submit" class="login-button">
+        Sign In
+      </button>
+
+      <div class="notice" id="notice">
+        Secure account login will be available after the
+        authentication system is connected.
+      </div>
+
+    </form>
+
+    <p class="register-link">
+      Don't have an account?
+      <a href="register.html">Register here</a>
+    </p>
+
+    <a href="index.html" class="home-link">
+      ← Back to Homepage
+    </a>
+  </main>
+
+  <footer>
+    © 2026 SkyGrowth. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("loginForm").addEventListener(
+      "submit", function(event) {
+        event.preventDefault();
+        document.getElementById("notice").style.display = "block";
+      }
+    );
+  </script>
+
+</body>
+</html>
